@@ -4,9 +4,9 @@ TOO SIMPLE TOO FUN
 
 ### KeyWord
 
-`Java`  `Mysql`  `Spring` `SpringMVC`  `Mybatis`  `JavaScript`
-`ACGN`  `BBS
-`
+`Java EE`  `Mysql`  `Spring` `SpringMVC`  `Mybatis`  `JavaScript`
+`ACGN`  `BBS`
+
 ---------
 #### Contact 
 
