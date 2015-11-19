@@ -10,8 +10,8 @@ TOO SIMPLE TOO FUN
 ---------
 #### Contact 
 
-- Email£º[@developer](diaozhatian666@gmail.com)
-- Blog£º[http://Þ±.ml](http://xc66.cc)
+- Emailï¼š[@developer](diaozhatian666@gmail.com)
+- Blogï¼š[http://è–‡.ml](http://xc66.cc)
 
 --------- 
 http://bbs.hodiao.com
