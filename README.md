@@ -10,7 +10,7 @@ TOO SIMPLE TOO FUN
 ---------
 #### Contact 
 
-- Email：[@developer](diaozhatian666@gmail.com)
+- Email：<http://diaozhatian666@gmail.com>
 - Blog：[http://薇.ml](http://xc66.cc)
 
 --------- 
