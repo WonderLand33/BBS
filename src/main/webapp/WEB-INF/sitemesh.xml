@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+    <mime-type>text/html</mime-type>
+    <mime-type>application/vnd.wap.xhtml+xml</mime-type>
+    <mime-type>application/xhtml+xml</mime-type>
+    <mapping decorator="/WEB-INF/decorator/decorator.jsp"/>
+
+
+    <!-- 不需要装饰的页面  -->
+    <mapping path="/static*" exclue="true"/>
+</sitemesh>
