@@ -1,5 +1,6 @@
 package com.honey.service.impl;
 
+import com.honey.HoneyConstants;
 import com.honey.entity.auto.Member;
 import com.honey.mapper.auto.MemberMapper;
 import com.honey.mapper.extend.IMemberDao;
@@ -59,6 +60,7 @@ public class MemberServiceImpl implements IMemberService{
     public int userRegister(Member member) {
         Date now = new Date();
         member.setPassword(Md5Util.md5(member.getPassword()));
+        member.setHeadImg(HoneyConstants.GRAVATAR_URL+ Md5Util.md5(member.getEmail()).toLowerCase());
         member.setCreateTime(now);
         member.setUpdateTime(now);
         memberMapper.insert(member);

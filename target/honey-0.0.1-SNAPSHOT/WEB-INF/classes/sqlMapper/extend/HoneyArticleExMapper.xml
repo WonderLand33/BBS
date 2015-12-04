@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.honey.mapper.extend.IArticleDao">
+    <resultMap id="SimpleArticleResultMap" type="com.honey.entity.extend.SimpleArticleVo">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="up" property="up" jdbcType="INTEGER" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="head_img" property="headImg" jdbcType="VARCHAR" />
+        <result column="sname" property="sname" jdbcType="VARCHAR" />
+    </resultMap>
+    <resultMap id="ArticleResultMap" type="com.honey.entity.extend.ArticleVo">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="up" property="up" jdbcType="INTEGER" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="head_img" property="headImg" jdbcType="VARCHAR" />
+        <result column="body" property="body" jdbcType="VARCHAR" />
+        <result column="ua" property="ua" jdbcType="VARCHAR" />
+        <result column="replys" property="replys" jdbcType="INTEGER" />
+    </resultMap>
+
+    <select id="findByPage" resultMap="SimpleArticleResultMap">
+       select ha.id,ha.up,ha.title,ha.create_time,
+        hm.nikename,hm.head_img,ht.sname,(select COUNT(1) from honey_reply where aid=ha.id) as replys
+        from honey_article ha
+        join honey_member hm on ha.mid = hm.id
+        join honey_type ht on ha.type_id = ht.id
+        <if test="map.typeId !=null and map.typeId!=''">
+            <where>
+                ht.id=#{map.typeId}
+            </where>
+        </if>
+        order by ha.create_time desc
+    </select>
+
+    <select id="findById" resultMap="ArticleResultMap" parameterType="java.lang.Integer">
+       select ha.id,ha.up,ha.title,ha.create_time,hm.nikename,
+	    hm.head_img,ham.body,ham.ua
+	    from honey_article ha
+        join honey_member hm ON ha.mid = hm.id
+        join honey_type ht ON ha.type_id = ht.id
+        join honey_article_main ham on ha.id = ham.aid
+       <where>
+           ha.id =#{id}
+       </where>
+    </select>
+
+    <select id="findAllType" resultMap="com.honey.mapper.auto.TypeMapper.BaseResultMap">
+        select * from honey_type
+    </select>
+
+    <insert id="insertArticle" useGeneratedKeys="true" parameterType="com.honey.entity.auto.Article" keyProperty="id">
+        insert into honey_article
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="mid != null" >
+                mid,
+            </if>
+            <if test="typeId != null" >
+                type_id,
+            </if>
+            <if test="up != null" >
+                up,
+            </if>
+            <if test="title != null" >
+                title,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="mid != null" >
+                #{mid,jdbcType=INTEGER},
+            </if>
+            <if test="typeId != null" >
+                #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="up != null" >
+                #{up,jdbcType=INTEGER},
+            </if>
+            <if test="title != null" >
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="up" parameterType="java.lang.Integer">
+        update honey_article set up = up+1 where id=#{aid}
+    </update>
+</mapper>

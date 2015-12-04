@@ -43,7 +43,7 @@ public class ValidateUtil {
      * @return
      */
     public static boolean checkUserName(String str) {
-        return strLength(str) >= 4 && strLength(str) <= 12?str.matches("^[a-zA-Z0-9\\u4e00-\\u9fa5]{4,12}$"):false;
+        return strLength(str) >= 4 && strLength(str) <= 12/*?str.matches("^[a-zA-Z0-9\\u4e00-\\u9fa5]{4,12}$"):false*/;
     }
 
 

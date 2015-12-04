@@ -83,7 +83,7 @@ public class UserCtrl extends BaseCtrl {
                 //ctx().cookie(HoneyConstants.LOGIN_COOKIE_ID, id);//设置cookie两个星期
                 // ctx().cookie(HoneyConstants.LOGIN_COOKIE_PWD, pwd);
                 ctx().session().setAttribute(HoneyConstants.LOGIN_SESSION, rsObj);//两个月过期
-                rsObj.setPassword("sb");//哈哈
+                rsObj.setPassword("default");//涂抹源对象密码
                 code = 1;
                 msg = "登录成功鸟~ 0.0";
                 rsMap.put("user", rsObj);
@@ -107,6 +107,8 @@ public class UserCtrl extends BaseCtrl {
     @ResponseBody
     public Map<String, Object> register(@RequestParam Map param) {
         String errMsg = validate(param);
+
+        log.info("register error:{}", errMsg);
         int errCode = -1;
         Map<String, Object> result = Maps.newHashMap();
         if (StringUtils.isBlank(errMsg)) {

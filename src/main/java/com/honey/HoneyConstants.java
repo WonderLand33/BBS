@@ -25,8 +25,11 @@ public class HoneyConstants {
     public static final String LOGIN_COOKIE_PWD = "honey_ivv"; //登录cookie名
     public static final String LOGIN_SESSION = "honey"; //登录session名
 
+    public static final String GRAVATAR_URL;
+
     static {
         WEB_DOMAIN = config.getProperty("domain");
+        GRAVATAR_URL = config.getProperty("gravatar"); // 全球公认头像
 
     }
 

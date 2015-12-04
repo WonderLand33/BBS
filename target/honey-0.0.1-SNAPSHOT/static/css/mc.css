@@ -1,0 +1,31 @@
+.mc {
+    line-height: 1.4;
+    padding: .3em .8em .3em .3em;
+    border-radius: .3em;
+    color: #35D;
+    display: inline-block;
+    text-decoration: none !important
+}
+
+.mc:hover {
+    background: rgba(80, 190, 255, .1)
+}
+
+.mc:after {
+    margin-left: .5em;
+    font-style: normal;
+    color: #999;
+    content: '▷'
+}
+
+.mc.play {
+    background: rgba(80, 190, 255, .1)
+}
+
+.mc.play:after {
+    content: '| |'
+}
+
+.mc.pause:after {
+    content: '▷'
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.honey.mapper.auto.ReplyMapper" >
+  <resultMap id="BaseResultMap" type="com.honey.entity.auto.Reply" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="aid" property="aid" jdbcType="INTEGER" />
+    <result column="mid" property="mid" jdbcType="INTEGER" />
+    <result column="msg" property="msg" jdbcType="VARCHAR" />
+    <result column="up" property="up" jdbcType="INTEGER" />
+    <result column="ua" property="ua" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, aid, mid, msg, up, ua, create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from honey_reply
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from honey_reply
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.honey.entity.auto.Reply" >
+    insert into honey_reply (id, aid, mid, 
+      msg, up, ua ,create_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{aid,jdbcType=INTEGER}, #{mid,jdbcType=INTEGER}, 
+      #{msg,jdbcType=VARCHAR}, #{up,jdbcType=INTEGER},  #{ua,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.honey.entity.auto.Reply" useGeneratedKeys="true" keyProperty="id">
+    insert into honey_reply
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="aid != null" >
+        aid,
+      </if>
+      <if test="mid != null" >
+        mid,
+      </if>
+      <if test="msg != null" >
+        msg,
+      </if>
+      <if test="up != null" >
+        up,
+      </if>
+      <if test="ua != null" >
+        ua,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="aid != null" >
+        #{aid,jdbcType=INTEGER},
+      </if>
+      <if test="mid != null" >
+        #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="msg != null" >
+        #{msg,jdbcType=VARCHAR},
+      </if>
+      <if test="up != null" >
+        #{up,jdbcType=INTEGER},
+      </if>
+      <if test="ua != null" >
+        #{ua,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.honey.entity.auto.Reply" >
+    update honey_reply
+    <set >
+      <if test="aid != null" >
+        aid = #{aid,jdbcType=INTEGER},
+      </if>
+      <if test="mid != null" >
+        mid = #{mid,jdbcType=INTEGER},
+      </if>
+      <if test="msg != null" >
+        msg = #{msg,jdbcType=VARCHAR},
+      </if>
+      <if test="up != null" >
+        up = #{up,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.honey.entity.auto.Reply" >
+    update honey_reply
+    set aid = #{aid,jdbcType=INTEGER},
+      mid = #{mid,jdbcType=INTEGER},
+      msg = #{msg,jdbcType=VARCHAR},
+      up = #{up,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
