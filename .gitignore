@@ -1,6 +1,4 @@
 .project
 .classpath
-*.iml
-y
-*.pub
+honey.iml
 env-config.properties
