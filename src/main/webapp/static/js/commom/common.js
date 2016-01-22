@@ -114,7 +114,7 @@ $(function () {
       $('head').append(j);
     },
     br:function(k){
-        return k.replace('\n', "");
+        //return k.replace('\n', "");
     },
     ph:function(){
       var textAreas = document.getElementsByTagName('textarea');
@@ -154,7 +154,7 @@ String.prototype.enTxt=function(){
 };
 String.prototype.enHtml=function(){
   return this
-      .replace(/(^\s*)|(\s*$)/g,'')
+      //.replace(/(^\s*)|(\s*$)/g,'')
     //.replace(/(http\:\/\/|)(ww[0-9]{1}\.sinaimg\.cn\/)(?:[\w]{4,10})(\/[\w]{16,32}\.)(gif|jpg|jpeg|png)/g,"http://$2bmiddle$3$4")
      //.replace(/(http\:\/\/[0-9A-Za-z\/.#&!?%:;=_]+\.)(gif|jpg|jpeg|png)/g,"<img src=\"$1$2\">")
       .replace(/\<a href\=\"http:\/\/music\.163\.com\/\#\/song\?id\=([0-9]{5,12})[\?\w\.\=]*\"\>http:\/\/music\.163\.com\/\#\/song\?id\=([0-9]{5,12})[\?\w\.\=]*\<\/a\>/g,'<a href="//music.163.com/#/song?id=$1" target="_blank" class="mc">http://music.163.com/#/song?id=$1</a>')

@@ -4,5 +4,5 @@
         <a class="close">×</a>
     </div>
     <ul class="U-act">
-        <li><a class="btn" href="#add">发表文章ヽ(`Д´)</a></li>
+        <li><a class="btn" href="#add">新的话题</a></li>
     </ul>

@@ -82,6 +82,7 @@ public class ReplyCtrl extends BaseCtrl{
     }
 
     @RequestMapping("rup.json")
+    @ResponseBody
     public void up(@RequestParam Integer rid){
         try{
             iReplyService.up(rid);

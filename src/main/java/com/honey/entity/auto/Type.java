@@ -7,6 +7,8 @@ public class Type {
 
     private String sname;
 
+    private String desc;
+
     public Integer getId() {
         return id;
     }
@@ -29,5 +31,13 @@ public class Type {
 
     public void setSname(String sname) {
         this.sname = sname == null ? null : sname.trim();
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

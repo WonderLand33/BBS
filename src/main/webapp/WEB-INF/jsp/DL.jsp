@@ -14,16 +14,14 @@
         <h2><c:out value="${p.title}" /></h2>
         <p class="ctrl">
           <span>${p.nikename}</span>
-          <span class="d">${x:formatDateToLong(p.createTime)}</span>
+          <span class="d" t="${x:formatDateToLong(p.createTime)}"></span>
           <span class="plus">${p.up}</span></p>
         <cite>${p.replys}</cite>
       </a>
     </li>
-    <c:if test="${loop.last}">
-      <p class="loading empty">没有更多啦OwQ</p>
-    </c:if>
 </c:forEach>
 </ul>
 <c:if test="${ss==0}"><p class="loading empty">没有新内容噢OwQ</p></c:if>
+
 
 

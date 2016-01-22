@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="1531633107">
     <data-source source="LOCAL" name="MySQL - honey@localhost" uuid="16ac3b0a-a067-462b-8666-cbc710654191">
-      <driver-ref>mysql</driver-ref>
+      <driver-ref>5587ce47-9ab0-4068-9bd7-3fc1bac2759d</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/honey</jdbc-url>

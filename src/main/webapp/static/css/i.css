@@ -93,13 +93,13 @@ body {
     top: 20px;
     margin-left: -.4em;
     position: fixed;
-    font-size: 2.6em;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: left;
 }
 
 #h a {
-    line-height: 70px;
+    line-height: 50px;
     display: block;
     padding: 0 .5em 0 .5em;
     border-radius: .5em;
@@ -218,9 +218,14 @@ body {
 }
 
 .entry {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.5;
     word-break: break-all;
+}
+
+.entry p{
+    line-height: 2em;
+    text-indent: 2em;
 }
 
 .P {
@@ -231,7 +236,7 @@ body {
 }
 
 .P h1 {
-    font-size: 3.2em;
+    font-size: 2em;
     line-height: 1;
 }
 
@@ -403,6 +408,7 @@ form p {
 
 a.btn {
     font-size: 1.2em;
+    text-align: center;
 }
 
 .fo {
@@ -523,7 +529,7 @@ body, input, textarea, select, button {
 @media (min-width: 1200px) {
     body {
         margin: 0 auto;
-        width: 1200px;
+        width: 65%;
         position: relative;
     }
 }

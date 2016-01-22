@@ -1,34 +1,29 @@
 {
   "friend": [
     {
-      "name": "部落格",
-      "url": "http://xc66.cc",
-      "description": "BUGGER"
+      "name": "博客",
+      "url": "http://buhuibaidu.me",
+      "description": "buhuibaidu.me"
     },
     {
       "name": "V2EX",
       "url": "http://v2ex.com/",
-      "description": "同性交友"
+      "description": "v2ex.com"
     },
     {
       "name": "GITHUB",
       "url": "https://github.com/",
-      "description": "外挂辅助"
+      "description": "同性交友"
     },
     {
       "name": "STACKOVERFLOW",
       "url": "http://stackoverflow.com/",
-      "description": "禁禁禁片"
-    },
-    {
-      "name": "ZA2",
-      "url": "http://za2.org/",
-      "description": "另一个我"
+      "description": "stackoverflow.com"
     },
     {
       "name": "SEGMENTFAULT",
       "url": "http://segmentfault.com/",
-      "description": "LOL皮肤免费领取"
+      "description": "segmentfault.com"
     }
   ]
 }

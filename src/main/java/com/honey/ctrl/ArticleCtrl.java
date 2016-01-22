@@ -40,7 +40,7 @@ public class ArticleCtrl extends BaseCtrl {
     private IArticleService iArticleService;
 
 
-    @RequestMapping("getList.json")
+    @RequestMapping("getList.htm")
     public String getSimpleArticle(@RequestParam Map<String, Object> param, PageResult<SimpleArticleVo> page,Model model){
 
         Map<String,Object> result=new HashMap<String,Object>();

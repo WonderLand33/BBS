@@ -1,18 +1,18 @@
-# BBS
+﻿# BBS
 TOO SIMPLE TOO FUN
 
 
 ### KeyWord
 
-`Java EE`  `Mysql`  `Spring` `SpringMVC`  `Mybatis`  `JavaScript`
+`Java EE`  `Mysql`  `Spring` `SpringMVC`  `Mybatis`  `JavaScript` `PJAX`
 `ACGN`  `BBS`
 
 ---------
 #### Contact 
 
 - Email：<diaozhatian666@gmail.com>
-- Blog：[http://薇.ml](http://xc66.cc)
+- Blog：[http://blog.olddriver.help/](http://blog.olddriver.help/)
 
 --------- 
-http://bbs.hodiao.com
+http://need.olddriver.help
 
