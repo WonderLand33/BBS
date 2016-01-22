@@ -1,0 +1,6 @@
+.project
+.classpath
+*.iml
+y
+*.pub
+env-config.properties
