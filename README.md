@@ -8,11 +8,3 @@ TOO SIMPLE TOO FUN
 `ACGN`  `BBS`
 
 ---------
-#### Contact 
-
-- Email：<diaozhatian666@gmail.com>
-- Blog：[http://blog.olddriver.help/](http://blog.olddriver.help/)
-
---------- 
-http://olddriver.help
-
