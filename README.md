@@ -1,10 +1,12 @@
 ﻿# BBS
-TOO SIMPLE TOO FUN
+A beautiful bbs for JavaWeb.
 
 
-### KeyWord
+### technology stack
 
 `Java EE`  `Mysql`  `Spring` `SpringMVC`  `Mybatis`  `JavaScript` `PJAX`
 `ACGN`  `BBS`
 
+
+### How to use
 
