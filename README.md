@@ -28,7 +28,7 @@
 
 ### 如何使用
 
-1. `$ git clone https://github.com/chiruom/jquery.danmu.js.git`
+1. `$ git clone https://github.com/x-pengg/BBS.git`
 
 2. 导入到 IntelliJ IDEA/~~Eclipse~~
 
@@ -41,5 +41,5 @@
 
 2. 获得 war 包，部署到 Tomcat/Jetty，启动
 
-
+3.打开浏览器，输入 `http://ip:8080`
 
