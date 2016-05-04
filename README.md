@@ -41,7 +41,7 @@
 
 2. 进入项目根目录，输入 `mvn clean package -P remote`
 
-3. 获得 war 包，部署到 tomcat/jetty 符合 `Servlet` 规范的容器中运行/启动
+3. 获得 war 包，部署到 `tomcat`/`jetty` 或符合 `Servlet` 规范的其它容器中运行/启动
 
 4. 打开浏览器，访问 `http://ip:8080`
 
