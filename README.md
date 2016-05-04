@@ -6,7 +6,7 @@
 ### 技术栈
 
 `Java EE`  `Mysql`  `Spring` `SpringMVC`  `Mybatis`  `JavaScript` `PJAX`
-`ACGN`  `BBS`
+`Maven` 
 
 
 ### 已有功能
@@ -26,7 +26,7 @@
 ...
 
 
-### 如何使用
+### 如何获得
 
 1. `$ git clone https://github.com/x-pengg/BBS.git`
 
@@ -35,11 +35,11 @@
 3. 开始食用
 
 
-### 如何部署到自己的服务器
+### 如何部署
 
 1. 进入项目根目录，输入 `mvn clean package -P remote`
 
-2. 获得 war 包，部署到 Tomcat/Jetty，启动
+2. 获得 war 包，部署到 `Tomcat`/`Jetty` 符合 `Servle`t 规范的容器中运行/启动
 
-3.打开浏览器，输入 `http://ip:8080`
+3. 打开浏览器，访问 `http://ip:8080`
 
