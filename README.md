@@ -1,4 +1,4 @@
-## 一个基于 JavaEE 开发的极简论坛
+## 又一个极简论坛
 
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
@@ -37,9 +37,11 @@
 
 ### 如何部署
 
-1. 进入项目根目录，输入 `mvn clean package -P remote`
+1. 修改 remote 文件夹下的 `env-config.properties` 
 
-2. 获得 war 包，部署到 `Tomcat`/`Jetty` 符合 `Servlet` 规范的容器中运行/启动
+2. 进入项目根目录，输入 `mvn clean package -P remote`
 
-3. 打开浏览器，访问 `http://ip:8080`
+3. 获得 war 包，部署到 tomcat/jetty 符合 `Servlet` 规范的容器中运行/启动
+
+4. 打开浏览器，访问 `http://ip:8080`
 
