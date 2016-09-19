@@ -2,6 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="my" uri="http://spring-abc.xyz/mytaglib" %>
 <c:set value="${fn:length(r.items)}" scope="page" var="ss"></c:set>
 
 <ul class="F a-fadein">
@@ -13,7 +14,7 @@
         <h2><c:out value="${p.title}" /></h2>
         <p class="ctrl">
           <span>${p.nikename}</span>
-          <span class="d" t="${p.createTime}"></span>
+          <span class="d" t="${my:formatDateToLong(p.createTime)}"></span>
           <span class="plus">${p.up}</span></p>
         <cite>${p.replys}</cite>
       </a>
