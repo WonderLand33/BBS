@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GBK"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <tlib-version>1.0</tlib-version>
+    <short-name>mytaglib</short-name>
+    <!-- 定义该标签库的URI -->
+    <uri>http://spring-abc.xyz/mytaglib</uri>
+    <!-- 定义第一个标签 -->
+    <tag>
+        <!-- 定义标签名 -->
+        <name>Flashback</name>
+        <!-- 定义标签处理类 -->
+        <tag-class>xyz.springabc.web.taglib.Flashback</tag-class>
+        <!-- 定义标签体为空 -->
+        <body-content>empty</body-content>
+        <attribute>
+        	<name>time</name>  
+        	<required>true</required>  
+        	<rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <!-- EL 函数 -->
+    <function>
+        <name>formatDateToLong</name>
+        <function-class>xyz.springabc.web.taglib.Flashback</function-class>
+        <function-signature>long formatDateToLong(java.util.Date)</function-signature>
+    </function>
+</taglib>
