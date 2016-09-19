@@ -5,7 +5,6 @@
 -- HeidiSQL 版本:                  9.3.0.4984
 -- --------------------------------------------------------
 
-/*!40101 SET NAMES utf8mb4 */;
 
 -- 导出 honey 的数据库结构
 CREATE DATABASE IF NOT EXISTS `honey` /*!40100 DEFAULT CHARACTER SET utf8 */;
@@ -13,7 +12,7 @@ USE `honey`;
 
 
 -- 导出  表 honey.honey_article 结构
-CREATE TABLE IF NOT EXISTS `honey_article` (
+CREATE TABLE IF NOT EXISTS `honey.honey_article` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `mid` int(11) NOT NULL,
   `type_id` int(11) NOT NULL,
@@ -24,14 +23,12 @@ CREATE TABLE IF NOT EXISTS `honey_article` (
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- 正在导出表  honey.honey_article 的数据：1 rows
-/*!40000 ALTER TABLE `honey_article` DISABLE KEYS */;
-INSERT IGNORE INTO `honey_article` (`id`, `mid`, `type_id`, `up`, `title`, `create_time`) VALUES
+INSERT IGNORE INTO `honey.honey_article` (`id`, `mid`, `type_id`, `up`, `title`, `create_time`) VALUES
 	(13, 2, 1, 0, '66666666666666666666666666666666666666666666666666666666666', '2016-09-19 19:38:06');
-/*!40000 ALTER TABLE `honey_article` ENABLE KEYS */;
 
 
 -- 导出  表 honey.honey_article_main 结构
-CREATE TABLE IF NOT EXISTS `honey_article_main` (
+CREATE TABLE IF NOT EXISTS `honey.honey_article_main` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `aid` int(11) NOT NULL,
   `body` text NOT NULL,
@@ -41,14 +38,12 @@ CREATE TABLE IF NOT EXISTS `honey_article_main` (
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- 正在导出表  honey.honey_article_main 的数据：1 rows
-/*!40000 ALTER TABLE `honey_article_main` DISABLE KEYS */;
-INSERT IGNORE INTO `honey_article_main` (`id`, `aid`, `body`, `ua`, `create_time`) VALUES
+INSERT IGNORE INTO `honey.honey_article_main` (`id`, `aid`, `body`, `ua`, `create_time`) VALUES
 	(5, 13, '66666666666666666666666666666666666666666666666666666666666', 'Cr', '2016-09-19 19:38:06');
-/*!40000 ALTER TABLE `honey_article_main` ENABLE KEYS */;
 
 
 -- 导出  表 honey.honey_member 结构
-CREATE TABLE IF NOT EXISTS `honey_member` (
+CREATE TABLE IF NOT EXISTS `honey.honey_member` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nikename` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -61,14 +56,12 @@ CREATE TABLE IF NOT EXISTS `honey_member` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- 正在导出表  honey.honey_member 的数据：1 rows
-/*!40000 ALTER TABLE `honey_member` DISABLE KEYS */;
-INSERT IGNORE INTO `honey_member` (`id`, `nikename`, `email`, `password`, `head_img`, `create_time`, `update_time`) VALUES
+INSERT IGNORE INTO `honey.honey_member` (`id`, `nikename`, `email`, `password`, `head_img`, `create_time`, `update_time`) VALUES
 	(2, '666666', '666666@liu.liu', 'F379EAF3C831B04DE153469D1BEC345E', 'http://cn.gravatar.com/avatar/4e3b157b24097948b982bb04bd676174', '2016-09-19 19:37:12', '2016-09-19 19:37:12');
-/*!40000 ALTER TABLE `honey_member` ENABLE KEYS */;
 
 
 -- 导出  表 honey.honey_reply 结构
-CREATE TABLE IF NOT EXISTS `honey_reply` (
+CREATE TABLE IF NOT EXISTS `honey.honey_reply` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `aid` int(11) NOT NULL,
   `mid` int(11) NOT NULL,
@@ -79,13 +72,9 @@ CREATE TABLE IF NOT EXISTS `honey_reply` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- 正在导出表  honey.honey_reply 的数据：0 rows
-/*!40000 ALTER TABLE `honey_reply` DISABLE KEYS */;
-/*!40000 ALTER TABLE `honey_reply` ENABLE KEYS */;
-
 
 -- 导出  表 honey.honey_type 结构
-CREATE TABLE IF NOT EXISTS `honey_type` (
+CREATE TABLE IF NOT EXISTS `honey.honey_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(10) NOT NULL,
   `sname` varchar(6) NOT NULL,
@@ -93,12 +82,10 @@ CREATE TABLE IF NOT EXISTS `honey_type` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- 正在导出表  honey.honey_type 的数据：6 rows
-/*!40000 ALTER TABLE `honey_type` DISABLE KEYS */;
-INSERT IGNORE INTO `honey_type` (`id`, `name`, `sname`) VALUES
+INSERT IGNORE INTO `honey.honey_type` (`id`, `name`, `sname`) VALUES
 	(1, '灌水', '水'),
 	(2, '创造', '创'),
 	(3, '转载', '转'),
 	(4, '音乐', '音'),
 	(5, '萝莉', '裸'),
 	(6, '游戏', '游');
-/*!40000 ALTER TABLE `honey_type` ENABLE KEYS */;
