@@ -65,8 +65,8 @@ public class SqlUtil {
                 }
                 int[] resultRows = statement2.executeBatch();
                 logger.debug("execute " + resultRows.length + "rows");
-                connection.close();
             }
+            connection.close();
         } catch (IOException e) {
             logger.error("no create tables sql file");
         } catch (SQLException e) {
