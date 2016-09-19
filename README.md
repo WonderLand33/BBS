@@ -2,15 +2,17 @@
 
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-
 ### 技术栈
 
 `Java EE`  `Mysql`  `Spring` `SpringMVC`  `Mybatis`  `JavaScript` `PJAX`
-`Maven` 
+`Maven`
+
+### 预览
+
+![preview](https://raw.githubusercontent.com/zh-h/BBS/master/src/main/webapp/static/img/preview.jpg)
 
 
 ### 已有功能
-
 
 - 单页面
 - 登录
@@ -32,7 +34,11 @@
 
 2. 导入到 IntelliJ IDEA/~~Eclipse~~
 
-3. 开始食用
+3. 配置 `deploy/local/env-config.properties` 里面的数据库连接
+
+4. `mvn jetty:run` 开始食用
+
+5. 初始账号密码 666666 666666
 
 
 ### 如何部署
