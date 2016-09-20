@@ -14,15 +14,15 @@
     </resultMap>
 
     <select id="findReplysByArticle" resultMap="BaseResultMap">
-      select hr.id,hr.msg, hr.up,hr.ua,
+        select hr.id,hr.msg, hr.up,hr.ua,
         hr.create_time,hm.id as memberId,hm.nikename,
         hm.head_img,ha.id as articleId
         from honey_reply hr
         LEFT JOIN honey_member hm on hr.mid = hm.id
         LEFT JOIN honey_article ha on hr.aid = ha.id
-       <where>
-           ha.id = #{aid}
-       </where>
+        <where>
+            ha.id = #{aid}
+        </where>
     </select>
 
     <update id="up" parameterType="java.lang.Integer">
