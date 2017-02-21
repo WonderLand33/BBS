@@ -5,6 +5,8 @@ import com.honey.entity.auto.Reply;
 import com.honey.entity.extend.ReplyVo;
 import com.honey.service.IReplyService;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,13 +27,15 @@ import java.util.Map;
 @Controller
 public class ReplyCtrl extends BaseCtrl{
 
+    Logger logger = LoggerFactory.getLogger(ReplyCtrl.class);
+
     @Resource
     private IReplyService iReplyService;
 
       @RequestMapping("message.json")
       @ResponseBody
       public List<ReplyVo> findMessage(@RequestParam Integer aid){
-          System.out.println(aid+"****************************");
+          logger.debug("reply id is {}",aid);
           return iReplyService.findReplysByArticle(aid);
       }
 

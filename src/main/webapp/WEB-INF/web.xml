@@ -88,10 +88,4 @@
         <error-code>404</error-code>
         <location>/static/error/404.html</location>
     </error-page>
-    <jsp-config>
-        <taglib>
-            <taglib-uri>http://www.raxtone.com/functions</taglib-uri>
-            <taglib-location>/WEB-INF/ElFunctions.tld</taglib-location>
-        </taglib>
-    </jsp-config>
 </web-app>
