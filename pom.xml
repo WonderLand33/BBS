@@ -19,7 +19,7 @@
 		<maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 		<timestamp>${maven.build.timestamp}</timestamp>
-		<spring.version>3.1.4.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		<mybatis.version>3.2.7</mybatis.version>
 		<slf4j.version>1.7.10</slf4j.version>
 		<log4j.version>1.2.9</log4j.version>
